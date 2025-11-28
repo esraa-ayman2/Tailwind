@@ -1,0 +1,8 @@
+<div [class]="[dark? 'text-main-500' : 'text-white' , dark? 'dark:text-main-300': 'dark:text-secondary-300' ]" class="pt-4 pb-2">
+    <h1 class="text-center text-5xl font-bold uppercase mb-4">{{componentName}}</h1>
+    <div class="flex items-center justify-center">
+        <div [class]="[dark? 'bg-main-500' : 'bg-white' , dark? 'dark:bg-main-300': 'dark:bg-secondary-300']" class="w-20 h-1 me-3"></div>
+        <i [class]="[dark? 'text-main-500' : 'text-white' , dark? 'dark:text-main-300': 'dark:text-secondary-300']" class="fa-solid fa-star"></i>
+        <div [class]="[dark? 'bg-main-500' : 'bg-white' , dark? 'dark:bg-main-300': 'dark:bg-secondary-300']" class="w-20 h-1 ms-3"></div>
+    </div>
+</div>

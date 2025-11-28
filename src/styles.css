@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme{
+    /* Main colors (light mode, unchanged) */
+    --color-main-100: #d5d8dc;
+    --color-main-200: #abb2b9;
+    --color-main-300: #808b96;
+    --color-main-400: #566573;
+    --color-main-500: #2c3e50;
+    --color-main-600: #233240;
+    --color-main-700: #1a2530;
+    --color-main-800: #121920;
+    --color-main-900: #090c10;
+
+    /* Secondary colors (light mode, unchanged) */
+    --color-secondary-100: #d1f2eb;
+    --color-secondary-200: #a3e4d7;
+    --color-secondary-300: #76d7c4;
+    --color-secondary-400: #48c9b0;
+    --color-secondary-500: #1abc9c;
+    --color-secondary-600: #15967d;
+    --color-secondary-700: #10715e;
+    --color-secondary-800: #0a4b3e;
+    --color-secondary-900: #05261f;
+
+    /* Tertiary colors (light mode, unchanged) */
+    --color-tertiary-100: #d1d3d5;
+    --color-tertiary-200: #a3a8ac;
+    --color-tertiary-300: #767c82;
+    --color-tertiary-400: #485159;
+    --color-tertiary-500: #1a252f;
+    --color-tertiary-600: #151e26;
+    --color-tertiary-700: #10161c;
+    --color-tertiary-800: #0a0f13;
+    --color-tertiary-900: #050709;
+
+    /* Dark Mode Adjustments (keeping the same hues, just slightly darker/muted) */
+    --color-main-100: #c2c6cc;
+    --color-main-200: #989fa8;
+    --color-main-300: #6f7984;
+    --color-main-400: #4a5561;
+    --color-main-500: #2a3a47;
+    --color-main-600: #212e3a;
+    --color-main-700: #1a2530;
+    --color-main-800: #121920;
+    --color-main-900: #0a0f13;
+
+    --color-secondary-100: #bde8e0;
+    --color-secondary-200: #8dd3c6;
+    --color-secondary-300: #61c1b0;
+    --color-secondary-400: #39ad9a;
+    --color-secondary-500: #17977f;
+    --color-secondary-600: #13806a;
+    --color-secondary-700: #0f6a55;
+    --color-secondary-800: #0a473a;
+    --color-secondary-900: #053022;
+
+    --color-tertiary-100: #c8cacf;
+    --color-tertiary-200: #9ea2a8;
+    --color-tertiary-300: #757b82;
+    --color-tertiary-400: #454c56;
+    --color-tertiary-500: #1b222d;
+    --color-tertiary-600: #161b25;
+    --color-tertiary-700: #11151c;
+    --color-tertiary-800: #0b0f13;
+    --color-tertiary-900: #06070b;
+
+}
+
+
+
+
+
+
+@layer components{
+    .main-div{
+        height: 90vh;
+    }
+
+    .input{
+        @apply relative z-10 rounded p-4 w-full focus:outline-none bg-white dark:bg-main-700 text-base text-gray-900 placeholder:text-gray-400  border-b-2 border-b-gray-300 mb-6;
+    }
+
+    .label{
+        @apply ps-1 text-secondary-500 dark:text-secondary-300 transition-[top] duration-300 relative top-0 z-0;
+    }
+}

@@ -1,0 +1,7 @@
+<div [class]="[darkMode? 'dark':'']">
+    <app-navbar (toggleDarkMode)="darkMode = $event"></app-navbar>
+    <div class="mt-[92px] ">
+        <router-outlet/>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,56 @@
+<nav [class.py-2]="isScrolled" [class.py-7]="!isScrolled"
+  class="bg-main-500 dark:bg-main-800 fixed top-0 start-0 end-0 transition-[padding] duration-300 z-40">
+
+  <div class="mx-20 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a routerLink="home" class="text-3xl font-bold text-white dark:text-main-300 uppercase">
+      start framework
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex">
+<a routerLink="about"
+   routerLinkActive="text-yellow-400 dark:text-yellow-300"
+   class="text-base font-bold uppercase text-white dark:text-main-300 mx-6 p-2">
+   about
+</a>
+
+<a routerLink="portfolio"
+   routerLinkActive="text-yellow-400 dark:text-yellow-300"
+   class="text-base font-bold uppercase text-white dark:text-main-300 mx-6 p-2">
+   portfolio
+</a>
+
+<a routerLink="contact"
+   routerLinkActive="text-yellow-400 dark:text-yellow-300"
+   class="text-base font-bold uppercase text-white dark:text-main-300 mx-6 p-2">
+   contact
+</a>
+
+    </div>
+
+ <a (click)="toggleDark()" class="">
+          <span class="hidden text-base font-bold hover:cursor-pointer  text-white dark:text-main-300 dark:inline-block"> <i class="fa-solid fa-moon text-2xl pt-3"></i></span>
+          <span class="dark:hidden text-base font-bold hover:cursor-pointer text-white"> <i class="fa-regular fa-sun text-2xl pt-3"></i></span>
+        </a>
+    <!-- Mobile Menu Icon -->
+    <button class="md:hidden text-white text-3xl" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+
+  <!-- Mobile Menu (no ngClass / no *ngIf) -->
+  <div
+    class="md:hidden bg-main-500 dark:bg-main-800 px-10 py-5 space-y-4 transition-all duration-300"
+    [class.hidden]="!isOpen"
+    [class.block]="isOpen">
+
+    <a routerLink="about" class="block text-white text-lg font-bold">about</a>
+    <a routerLink="portfolio" class="block text-white text-lg font-bold">portfolio</a>
+    <a routerLink="contact" class="block text-white text-lg font-bold">contact</a>
+
+
+</div>
+</nav>

@@ -1,0 +1,19 @@
+<div class="main-div py-7 dark:bg-main-700">
+    <div class="container w-5/6 mx-auto">
+        <app-title [componentName]="'contact section'" [dark]="true"></app-title>
+        <div class="flex justify-center items-center py-5 mt-3">
+        <form class="w-1/2">
+            <label [class.top-10]="!activeName" class="label " for="userName">User Name :</label>
+            <input (input)="activeName = showLabel($event)" id="userName" class="input" placeholder="user name" type="text">
+            <label [class.top-10]="!activeAge" class="label " for="userAge">User Number :</label>
+            <input (input)="activeAge = showLabel($event)" id="userAge" class="input " placeholder="user age" type="number">
+            <label [class.top-10]="!activeEmail" class="label " for="userEmail">User Email :</label>
+            <input (input)="activeEmail = showLabel($event)" id="userEmail" class="input " placeholder="user email" type="email">
+            <label [class.top-10]="!activePassword" class="label " for="password">User Password :</label>
+            <input (input)="activePassword = showLabel($event)" id="password" class="input " placeholder="user password" type="password">
+            <button class="rounded bg-secondary-500 dark:bg-secondary-800 border-0 p-2 text-white dark:text-secondary-300 hover:cursor-pointer">send message</button>
+        </form>
+        </div>
+        
+    </div>
+</div>

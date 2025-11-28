@@ -1,0 +1,15 @@
+<div  class=" relative">
+    <div (click)="openModal()" class="text-lg opacity-0 transition-opacity duration-300 hover:opacity-80 hover:cursor-pointer bg-secondary-500 w-full h-full rounded absolute flex justify-center items-center">
+        <i class="fa-solid fa-plus text-white text-6xl"></i>
+    </div>         
+    <img class="w-full rounded" src="{{image}}" alt="">
+</div>
+
+@if (showModal) {
+<app-modal
+ [close]="closeModal"
+>
+    <img class="w-full
+    " src="{{image}}" alt="">
+</app-modal> 
+}
